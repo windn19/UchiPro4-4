@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+    {% for key, value in context.items() %}
+      {% if loop.first %}
+        <span>Это первая запись из {{ loop.length }}</span>
+      {% endif %}
+      <h1>{{ loop.index }} {{ key }} {{ loop.index0 }}</h1>
+      <p>{{ value }}</p>
+      {% if loop.last %}
+        <span>Это последняя запись из {{ loop.length }}</span>
+      {% endif %}
+      <hr>
+    {% endfor %}
+</body>
+</html>

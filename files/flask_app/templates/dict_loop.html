@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <ol>
+    {% for key, value in context.items() %}
+      <h1>{{ key }}</h1>
+      <p>{{ value }}</p>
+      <hr>
+    {% endfor %}
+  </ol>
+</body>
+</html>
